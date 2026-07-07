@@ -15,9 +15,34 @@
             <button class="navbar-brand btn btn-sm btn-outline-light ms-auto d-lg-none" onclick="window.location.href='admin.html'">Quản trị</button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Trang chủ</a></li>
-                    <li class="nav-item"><a class="btn btn-warning text-dark fw-bold ms-2" href="admin.html">Trang Quản Trị</a></li>
-                </ul>
+    <li class="nav-item">
+        <a class="nav-link active" href="index.html">
+            Trang chủ
+        </a>
+    </li>
+    <li class="nav-item me-2">
+        <button
+            class="btn btn-outline-light"
+            data-bs-toggle="modal"
+            data-bs-target="#loginModal">
+            Đăng nhập
+        </button>
+    </li>
+    <li class="nav-item me-2">
+        <button
+            class="btn btn-warning"
+            data-bs-toggle="modal"
+            data-bs-target="#registerModal">
+            Đăng ký
+        </button>
+    </li>
+    <li class="nav-item">
+        <a class="btn btn-success ms-2"
+           href="admin.html">
+            Trang Quản Trị
+        </a>
+    </li>
+</ul>
             </div>
         </div>
     </nav>
@@ -32,6 +57,26 @@
     </div>
 </section>
     <div class="container my-4">
+        <div class="row mb-4">
+
+    <div class="col-md-10">
+        <input
+            type="text"
+            id="searchInput"
+            class="form-control"
+            placeholder=" Tìm kiếm sản phẩm..."
+        >
+    </div>
+
+    <div class="col-md-2">
+        <button
+            class="btn btn-success w-100"
+            id="btnSearch">
+            Tìm kiếm
+        </button>
+    </div>
+
+</div>
         <!-- Nút mở menu -->
 <div class="container mt-3">
     <button class="btn btn-success" data-bs-toggle="offcanvas" data-bs-target="#sideMenu">
@@ -133,7 +178,7 @@
         </p>
 
         <p class="mb-2">
-            ✉ Email: ecoshop@gmail.com
+             Email: ecoshop@gmail.com
         </p>
 
         <p class="mb-0">
@@ -143,54 +188,94 @@
 </footer>
     <!-- Menu bên trái -->
 <div class="offcanvas offcanvas-start" tabindex="-1" id="sideMenu">
-
     <div class="offcanvas-header">
         <h5 class="offcanvas-title"> EcoShop</h5>
-
         <button type="button"
                 class="btn-close"
                 data-bs-dismiss="offcanvas">
         </button>
     </div>
-
     <div class="offcanvas-body">
-
         <ul class="list-group list-group-flush">
-
             <a href="index.html"
                class="list-group-item list-group-item-action">
                  Trang chủ
             </a>
-
             <a href="#productGrid"
                class="list-group-item list-group-item-action">
                  Sản phẩm
             </a>
-
             <a href="#"
                class="list-group-item list-group-item-action">
                  Tin tức
             </a>
-
             <a href="#"
                class="list-group-item list-group-item-action">
                  Về chúng tôi
             </a>
-
             <a href="#"
                class="list-group-item list-group-item-action">
                  Nhượng quyền
             </a>
-
             <a href="#footer"
                class="list-group-item list-group-item-action">
                  Hệ thống cửa hàng
             </a>
-
         </ul>
-
     </div>
+</div>
+    <!-- Modal Đăng nhập -->
+<div class="modal fade" id="loginModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
 
+            <div class="modal-header bg-success text-white">
+                <h5>Đăng nhập</h5>
+                <button class="btn-close btn-close-white"
+                        data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="email"
+                       class="form-control mb-3"
+                       placeholder="Email">
+                <input type="password"
+                       class="form-control mb-3"
+                       placeholder="Mật khẩu">
+                <button class="btn btn-success w-100">
+                    Đăng nhập
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- Modal Đăng ký -->
+<div class="modal fade" id="registerModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-warning">
+                <h5>Đăng ký tài khoản</h5>
+                <button class="btn-close"
+                        data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <input type="text"
+                       class="form-control mb-3"
+                       placeholder="Họ và tên">
+                <input type="email"
+                       class="form-control mb-3"
+                       placeholder="Email">
+                <input type="password"
+                       class="form-control mb-3"
+                       placeholder="Mật khẩu">
+                <input type="password"
+                       class="form-control mb-3"
+                       placeholder="Nhập lại mật khẩu">
+                <button class="btn btn-warning w-100">
+                    Đăng ký
+                </button>
+            </div>
+        </div>
+    </div>
 </div>
     <div class="toast-container position-fixed bottom-0 end-0 p-3"></div>
 
