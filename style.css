@@ -17,3 +17,35 @@
     min-height: 18px;
     font-weight: 500;
 }
+/* Banner khuyến mãi */
+.promo-banner{
+    background: linear-gradient(90deg,#198754,#20c997);
+    color:#fff;
+    border-radius:10px;
+    margin:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.promo-banner h2{
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.promo-banner p{
+    font-size:18px;
+}
+.offcanvas{
+    width:260px;
+}
+
+.list-group-item{
+    font-size:20px;
+    font-weight:600;
+    border:none;
+    padding:18px;
+}
+
+.list-group-item:hover{
+    background:#198754;
+    color:white;
+}
